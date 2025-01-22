@@ -1,3 +1,4 @@
+import 'package:advanced_project/presentation/theme_manager.dart';
 import 'package:flutter/material.dart';
 
 // note: use Singleton Pattern to create the application
@@ -14,6 +15,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      theme: getApplicationTheme(),
+    );
   }
 }
