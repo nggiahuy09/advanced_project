@@ -20,7 +20,7 @@ extension HexColor on Color {
 
     // note: handle no-opacity value in hexa string
     if (hexColorString.length == 6) {
-      hexColorString += 'FF';
+      hexColorString = 'FF$hexColorString';
     }
 
     return Color(int.parse(hexColorString, radix: 16));
