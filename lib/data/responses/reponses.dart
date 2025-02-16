@@ -69,5 +69,6 @@ class AuthenticationResponse extends BaseReponses {
   factory AuthenticationResponse.fromJson(Map<String, dynamic> json) =>
       _$AuthenticationResponseFromJson(json);
 
+  @override
   Map<String, dynamic> toJson() => _$AuthenticationResponseToJson(this);
 }
