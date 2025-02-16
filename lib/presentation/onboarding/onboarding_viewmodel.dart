@@ -42,6 +42,12 @@ class OnBoardingViewModel extends BaseViewModel
   }
 
   @override
+  void onSkipPressed() {
+    _currentIndex = _list.length - 1;
+    _postDataToView();
+  }
+
+  @override
   void onPageChanged(int index) {
     _currentIndex = index;
     _postDataToView();
@@ -96,6 +102,8 @@ class OnBoardingViewModel extends BaseViewModel
 abstract class OnboardingViewModelInputs {
   int goNext();
   int goPrevious();
+  void onSkipPressed();
+
   void onPageChanged(int index);
 
   Sink get inputSliderViewObject; // sink is a way to add data to the stream

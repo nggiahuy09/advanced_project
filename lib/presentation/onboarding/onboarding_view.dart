@@ -63,7 +63,9 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _viewModel.onSkipPressed();
+                  },
                   child: Text(
                     AppStrings.skip,
                     style: Theme.of(context).textTheme.titleLarge,
